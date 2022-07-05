@@ -1,0 +1,45 @@
+// SPDX-License-Identifier: GPL-3.0
+pragma solidity >=0.7.0 <0.9.0;
+struct year{
+     string class;
+}
+contract demo
+{
+    mapping (uint=>string) private roll_no;
+    mapping(uint =>string) public Daamarks;
+    mapping(uint =>string) private Osmarks;
+    mapping(uint =>string) public Dldmmarks;
+    mapping(uint =>string) public Bhrmarks;
+    mapping(uint =>string) public Ptrpmarks;
+    year public class;
+    constructor(string memory _class){
+         class.class=_class;
+    }
+
+   function student_information(uint keys,string memory value) public
+    {
+        roll_no[keys]=value;
+    }
+    function daa(uint key,string memory _marks) public
+    {
+         Daamarks[key]=_marks;
+    }
+    function os(uint key,string memory _marks) public
+    {
+         Osmarks[key]=_marks;
+    }
+    function Bhr(uint key,string memory _marks) public
+    {
+         Bhrmarks[key]=_marks;
+    }
+    function Dldm(uint key,string memory _marks) public
+    {
+         Dldmmarks[key]=_marks;
+    }
+    function Ptrp(uint key,string memory _marks) public
+    {
+         Ptrpmarks[key]=_marks;
+    }
+   
+    
+}
